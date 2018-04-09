@@ -81,7 +81,7 @@ while value <= NumberOfRowsInTime:
 #    SessionDuration = LastTime - FirstTime
     FirstDate = date.loc[IP_addresses[value], "min"]
     LastDate = date.loc[IP_addresses[value], "max"] 
-#    while i <= NumberOfRowsInData:                       # Counting number of requests.
+#    while i <= NumberOfRowsInData:                       # Counting number of requests. This causes the code to be very slow for some reason.
 #        if data.loc[i,"ip"]==UserIP:
 #            CountOfRequests = CountOfRequests + 1
 #            i=i+1
