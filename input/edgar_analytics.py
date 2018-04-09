@@ -81,12 +81,12 @@ while value <= NumberOfRowsInTime:
 #    SessionDuration = LastTime - FirstTime
     FirstDate = date.loc[IP_addresses[value], "min"]
     LastDate = date.loc[IP_addresses[value], "max"] 
-    while i <= NumberOfRowsInData:
-        if data.loc[i,"ip"]==UserIP:
-            CountOfRequests = CountOfRequests + 1
-            i=i+1
-    print(UserIP,',',FirstDate,FirstTime,',',LastDate,LastTime,',',CountOfRequests)
-    outputfile.write(UserIP,',',FirstDate,FirstTime,',',LastDate,LastTime,',',CountOfRequests)
+#    while i <= NumberOfRowsInData:                       # Counting number of requests.
+#        if data.loc[i,"ip"]==UserIP:
+#            CountOfRequests = CountOfRequests + 1
+#            i=i+1
+    print(UserIP,',',FirstDate,FirstTime,',',LastDate,LastTime,',')
+    outputfile.write(UserIP,',',FirstDate,FirstTime,',',LastDate,LastTime)
     value=value+1
     CountOfRequests=0
     i=0
